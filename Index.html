@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galpon Oscar Kolbasiuk</title>
+    <style>
+        /* Reset y estilos básicos */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 1.8rem;
+        }
+        nav {
+            margin-top: 0.5rem;
+        }
+        /* Menú desplegable */
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            position: relative;
+        }
+        .menu > li {
+            position: relative;
+        }
+        .menu > li > a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .menu > li > a:hover,
+        .menu > li > a:focus {
+            background-color: #34495e;
+            border-radius: 4px;
+        }
+        /* Submenú */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #34495e;
+            min-width: 180px;
+            border-radius: 0 0 6px 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .submenu li {
+            list-style: none;
+        }
+        .submenu li a {
+            color: white;
+            padding: 0.5rem 1rem;
+            display: block;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        .submenu li a:hover,
+        .submenu li a:focus {
+            background-color: #2c3e50;
+        }
+        /* Mostrar submenu al hover */
+        .menu > li:hover .submenu,
+        .menu > li:focus-within .submenu {
+            display: block;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            min-height: 300px;
+        }
+        main h2 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        main p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 3rem;
+        }
+        /* Secciones ocultas */
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        /* Responsive */
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+            }
+            .submenu {
+                position: static;
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galpon Oscar Kolbasiuk</h1>
+        <nav>
+            <ul class="menu" role="menubar" aria-label="Menú principal">
+                <li role="none">
+                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">Sectores ▾</a>
+                    <ul class="submenu" role="menu" aria-label="Submenú Sectores">
+                        <li role="none"><a href="#" role="menuitem" tabindex="-1" data-section="inicio">Inicio</a></li>
+                        <li role="none"><a href="#" role="menuitem" tabindex="-1" data-section="herreria">Herrería</a></li>
+                        <li role="none"><a href="#" role="menuitem" tabindex="-1" data-section="torneria">Tornería</a></li>
+                        <li role="none"><a href="#" role="menuitem" tabindex="-1" data-section="gomeria">Gomería</a></li>
+                        <li role="none"><a href="#" role="menuitem" tabindex="-1" data-section="mecanica">Mecánica</a></li>
+                    </ul>
+                </li>
+                <li role="none"><a href="#" role="menuitem" tabindex="0" data-section="contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="active">
+            <h2>Inicio</h2>
+            <p>
+                Los “galpones de Oscar Kolbasiuk” pertenecen a Oscar Kolbasiuk S.A.S., ubicados a las afueras de la ciudad de Paysandú, en camino a San Félix, entre las calles Don Martín Etchebarne y Proyectada 86.
+            </p>
+            <p>
+                Fundada en 1986 por Oscar Kolbasiuk junto a sus hijos Román, Willy y Eloy, la compañía inició sus actividades en la cosecha de remolacha azucarera para la empresa Azucarlito. Con el tiempo, se consolidó como una sólida corporación de empresas desplegadas en distintos puntos del país.
+            </p>
+            <p>
+                Integrada por tres áreas principales:
+            </p>
+            <ul>
+                <li>Forestal, que constituye su actividad principal.</li>
+                <li>Transporte de carga.</li>
+                <li>Área complementaria dedicada a la ganadería, agricultura y horticultura.</li>
+            </ul>
+            <p>
+                La empresa dispone de un taller propio donde se realizan reparaciones de maquinaria, incluyendo servicios mecánicos y metalúrgicos. Actualmente, la corporación cuenta con más de 500 empleados directos e indirectos y más de 35 años de trayectoria, ofreciendo servicios como siembra, reforestación y administración de plantaciones.
+            </p>
+            <p>
+                Su flota incluye camiones, tractores, grapos descortezadores, excéntricas, motoniveladoras, retroexcavadoras, cosechadoras forestales, autocargadores, ómnibus, combis y camionetas.
+            </p>
+        </section>
+
+        <section id="herreria">
+            <h2>Herrería</h2>
+            <p>
+                El área de herrería se encarga de la fabricación, reparación y mantenimiento de estructuras metálicas y piezas necesarias para la operación de la empresa. Cuenta con personal especializado y maquinaria adecuada para trabajos de soldadura, corte y conformado de metales.
+            </p>
+        </section>
+
+        <section id="torneria">
+            <h2>Tornería</h2>
+            <p>
+                La tornería realiza trabajos de mecanizado de precisión para la fabricación y reparación de piezas mecánicas. Dispone de tornos, fresadoras y herramientas CNC para garantizar la calidad y exactitud en cada proyecto.
+            </p>
+        </section>
+
+        <section id="gomeria">
+            <h2>Gomería</h2>
+            <p>
+                La gomería ofrece servicios de mantenimiento y reparación de neumáticos para la flota de vehículos y maquinaria de la empresa. Se asegura de mantener la seguridad y eficiencia en el transporte y operación de equipos.
+            </p>
+        </section>
+
+        <section id="mecanica">
+            <h2>Mecánica</h2>
+            <p>
+                El área de mecánica se dedica al mantenimiento, reparación y puesta a punto de la maquinaria y vehículos de la empresa, asegurando su óptimo funcionamiento y prolongando su vida útil.
+            </p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p><strong>Dirección:</strong> MW33+RJ8, Unnamed Road, 60000 San Félix, Departamento de Paysandú</p>
+            <p><strong>Teléfono:</strong> +598 1234 5678 (Ejemplo)</p>
+            <p><strong>Email:</strong> contacto@oskolbasiuk.com</p>
+            <p>Para más información o consultas, por favor utilice los datos de contacto o visite nuestras instalaciones.</p>
+
+            <h3>Ubicación</h3>
+            <!-- Imagen de ubicación -->
+            <img src="ubicacion.jpg" alt="Mapa de ubicación Galpón Oscar Kolbasiuk" style="max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2)">
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Galpon Oscar Kolbasiuk S.A.S. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para mostrar solo la sección seleccionada
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('main section');
+            secciones.forEach(sec => {
+                if (sec.id === id) {
+                    sec.classList.add('active');
+                } else {
+                    sec.classList.remove('active');
+                }
+            });
+        }
+
+        // Capturar clicks en enlaces del menú que tienen data-section
+        document.querySelectorAll('a[data-section]').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const id = link.getAttribute('data-section');
+                mostrarSeccion(id);
+            });
+        });
+    </script>
+</body>
+</html>
